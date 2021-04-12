@@ -2,7 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/*Responsive Design
+Why is the viewport meta-tag so important?It allows ur browser to read our
+media queries
+We write our media queries at the bottom of our CSS*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -194,6 +197,9 @@ h2{
     text-align: right;
     margin-right: 10%;
 }
+#contact h2{
+    background-color: #fbfffb;
+}
 .left, .right{
 width: 50%;
 display: flex;
@@ -214,4 +220,70 @@ align-items: center;
 }
 #contact a{
     color: #fbfffb;
+}
+/*Responsive Styles*/
+/*Breakpoints*/
+/*Tablet*/
+/*Difference between max-width and min-widht
+
+-max-width scales down,this is for desktop first design
+
+-min-width scales up, this is for mobile first design*/
+@media(max-width:800px){
+    #about div{
+        width: 40%;
+    }
+    .shopText div{
+        width: 70%;
+    }
+}
+/*Phone*/
+@media(max-width:500px){
+nav{
+    flex-direction: column;
+    align-items: center;
+}
+.link{
+    width: 100%;
+}
+.logo{
+    width: 25%;
+}
+#home button{
+    display: none;
+}
+#about{
+    background-image: none;
+    background-color: #e2e3e5;
+    justify-content: center;
+}
+#about div{
+    margin-right: 0;
+    width: 80%;
+}
+.container{
+    flex-direction: column;
+    align-items: center;
+}
+.bg-img, .shopText{
+    width: 90%;
+}
+.mobileSpecific{
+    flex-direction: column-reverse;
+
+}
+.shopText div{
+    width: 100%;
+}
+
+    .left, .right{
+        width: 100%;
+    }
+    #contact p{
+        text-align: center;
+        margin: 0;
+    }
+    .left div{
+        width: 50%;
+    }
 }
